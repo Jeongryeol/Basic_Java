@@ -1,7 +1,17 @@
 package chapter01_variable;
-/*****************************************************************
+/****************************************************************
 	  
 	<<키워드>> :: 변수의 선언위치와 초기화
+	  
+	<<Java에 있어 변수란?>>
+		해당 '값'을 '타입'에 맞춰서
+		'이름'으로 '주소번지'를 부여해서'기억'하고
+		기억된 데이터들을 '일괄처리'하기 위해서 고안된 기초 자료구조이다.
+		
+	<<자료구조의 발전순서>> :: ( 읽고 지나가도 좋습니다. )
+		변수 ▶▶ 배열 ▶▶ 객체배열 ▶▶ 자료구조 ▶▶ 프레임워크 ▶▶ 스프링 
+	  
+*****************************************************************
 	  
 	<<전역변수(멤버변수)와 지역변수(로컬변수)>>
 		1)선언만 해도 자동으로 초기화를 진행한다.
@@ -30,7 +40,7 @@ public class Step01_initialization {
 
 	/*사용자정의메소드*/
 	//전역변수를 초기화하는 메소드
-	public void methodA() {
+	public void initialize() {
 		this.number = 1026;			//int는 정수를 담을 수 있다.
 		this.pi_l = 80099010230l;	//long은 int보다 더 큰 정수를 담을 수 있다.
 		this.pi_d = 3.14;			//3.14d와 같다. (double이 기본형으로 더 큰집합)
@@ -38,60 +48,23 @@ public class Step01_initialization {
 	}
 	//출력을 처리하는 메소드
 	public void printVariables() {
-		System.out.println(number);
-		System.out.println(pi_l);
-		System.out.println(pi_d);
-		System.out.println(pi_f);
+		System.out.println("(int타입)		number	: "+number);
+		System.out.println("(long타입) 	pi_l	: "+pi_l);
+		System.out.println("(double타입)	pi_d	: "+pi_d);
+		System.out.println("(float타입 )	pi_f	: "+pi_f);
+		System.out.print("\n");
 	}
 	
 	/*메인메소드*/
 	//실행부
 	public static void main(String[] args) {
+		Step01_initialization in = new Step01_initialization();
+		System.out.println("====[아래는 초기화 전 전역변수의 값]====");
+		in.printVariables();
+		System.out.println("====[아래는 초기화 후 전역변수의 값]====");
+		in.initialize();
+		in.printVariables();
+		System.out.println("====[메엔메소드가 종료되었습니다.]====");
 	}
 	
 }
-
-
-
-//아래부분은 나중에 읽어보셔도 됩니다.(chapter06에서 또 설명될 예정)
-/**********************************************************************
-	 
-	 
-<<static메서드에서 non-static메서드나 전역변수(멤버변수)로 접근할 수 없는 이유>>
- 	
- 	static관련자료가 non-static자료보다 먼저 생성되기 때문이다.
- 	
- 	static 자료를 남발하면, 사용되지 않는 변수가 프로그램이 종료될 때 까지 잔류하기 떄문에
- 	memory overflow현상 등의 문제를 초래하게 되므로 static 선언은 상당한 주의를 필요로 한다.
- 	(잔류하는 이유는 하단의 메모리 생명주기 참조)
-
-
-<<Java 메모리 구조 >>
-	[JVM(자바가상머신,Java Virtual Machine)의 역할]
-		개발자(developer)가 입력된 코드(code, high level language)를
-		JVM(자바가상머신)이 기계어(low level language)로 변환하고 반대과정도 수행한다.
-		이 과정을 컴파일(complie)이라고 한다.
-	
-	[Text Area]
-		JVM이 컴파일하여 컴퓨터 프로그램이 이해하는 row-level언어가 저장되는 영역
-	
-	[Method Area-실행순서1]
-		프로그램 실행중에 어떤 클래스가 사용되면 JVM은 bin파일내부의 해당 *.class파일을 읽어서 분석하고
-		클래스에 대한 정보(클래스 데이터)를 이곳에 저장하고, 클래스 변수(전역변수)도 이곳에 저장된다.
-	
-	[Static Area-실행순서2]
-		프로그램 실행부터 모든 인스턴스에 접근가능한 클래스 차원에서 정의된 전역적 성격의 필드
-		프로그램이 종료되는 가장 마지막에 반환된다.
-	
-	[Heap Area-실행순서3]
-		프로그램 실행중에 생성되는 모든 인스턴스를 관리하는 메모리영역(non-static영역)
-		new 예약어를 통해서 인스턴스 필드가 생성되고, 인스턴스를 참조하였던
-	
-	[Stack Area-실행순서4]::메소드 실행시 생성되는 변수(지역변수, 로컬변수, 자동변수)가 저장되는 메모리영역
-		메소드가 실행하면 지역변수가 생성되고 종료되면 그 자원이 반환되므로
-		프로그램 순서 상 가장 먼저 반환되는 영역이다.
-		그러므로 지역변수로 선언하면 다른 메소드나 클래스에서는 사용할 수 없다.
-	 	
-	 
-***********************************************************************/
-
