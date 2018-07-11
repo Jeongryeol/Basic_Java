@@ -1,4 +1,15 @@
-package chapter01_variable;
+package chapter01_Variable;
+
+/****************************************************************
+	
+	@author Jeongryeol Lee
+	@date	2018.07.10
+	@classGoal
+		1. 선언위치에 따른 전역변수와 지역변수의 접근에 대해 이해한다.
+		2. static영역과 non-static영역, 메모리를 이해한다.
+		3. 메모리에 올리기 위해 사용되는 static과 instance를 이해한다.
+		
+*****************************************************************/
 
 public class Step02_static_nonStatic {
 	/*선언부*/
