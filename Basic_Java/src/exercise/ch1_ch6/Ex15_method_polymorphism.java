@@ -16,7 +16,7 @@ class Super{
 }
 
 /*자식클래스*/
-public class Ex01_method_polymorphism extends Super{
+public class Ex15_method_polymorphism extends Super{
 	//a.
 	public float getNum(){return 4.f;}
 	//오버라이딩 : 부모클래스의 메소드를, 같은 이름의 메소드로, 속성과 파라미터를 변화시키지 않은채, 리턴값을 새로 정의하는것

@@ -11,7 +11,7 @@ package exercise.ch1_ch6;
 		
  *****************************************************************/
 
-public class Ex04_static {
+public class Ex03_static {
     
 	private static int a;
 	
@@ -32,7 +32,7 @@ public class Ex04_static {
     
     //만약 아래와 같다면?
     public static void modify2(int a){
-    	Ex04_static.a++;
+    	Ex03_static.a++;
     	//static 변수이므로 인스턴스화없이 주소번지.변수명 으로 호출가능
     	a++;
     	//주소번지를 입력하지 않은경우에,

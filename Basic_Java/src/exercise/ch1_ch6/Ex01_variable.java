@@ -11,7 +11,7 @@ package exercise.ch1_ch6;
 		
  *****************************************************************/
 
-public class Ex03_variable {
+public class Ex01_variable {
 
 	
     public static void main(String args[]){

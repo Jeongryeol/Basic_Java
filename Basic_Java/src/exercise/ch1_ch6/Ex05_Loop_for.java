@@ -56,7 +56,7 @@ package exercise.ch1_ch6;
 	
 ******************************************************************/
 
-public class Ex07_Loop_for {
+public class Ex05_Loop_for {
 
 	public static void main(String[] args) {
 		

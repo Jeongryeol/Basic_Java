@@ -14,7 +14,7 @@ package exercise.ch1_ch6;
 		
  *****************************************************************/
 
-public class Ex06_Control_Statement {
+public class Ex04_Loop_for {
 
 	public static void main(String[] args){
 		

@@ -13,7 +13,7 @@ package exercise.ch1_ch6;
 		
  *****************************************************************/
 
-public class Ex05_do_while {
+public class Ex07_Loop_do_while {
 	
 	public static void main(String[] args) {
 		int i=1, j=10;//같은 타입으로 여러변수 선언 및 초기화 가능
