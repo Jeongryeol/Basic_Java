@@ -55,6 +55,31 @@ public class Step02_operators {
 		System.out.println("numA==4 : "+(numA==4));
 		System.out.println("numB!=8 : "+(numB!=8));
 		
+		//비교연산자2
+		/*
+		<< 어느쪽이 더 안전한 코딩인가요? >>
+			if(db_id.equals(u_id)){
+			if(u_id.equals(db_id)){
+		
+		<< 답 : db_id.equals(u_id)>>
+			대상객체의 equals(비교객체)메소드는 대상객체와 비교객체가 같은지를 비교합니다.
+			이때 대상객체가 null인 경우, NullPointException이 발생할 위험이 있으므로
+			객체의 equals로 값을 비교할때는 null값이 입력될 여지가 있는 객체가 비교객체로 사용되어야한다.
+			
+			따라서, 프로그래밍이 완벽히 마무리된 상태에서는
+			DB에서 조회해온 아이디와 비밀번호는 반드시 존재하므로
+			사용자가 입력한 아이디와 비밀번호가 빈값(null)일 가능성이 있으므로
+			빈 객체(null)에 equals()메소드를 사용하지 않도록 합니다. 
+		
+		<< 참고 ==와는 어떻게 다른가요? >>
+		[ == ]
+			tests for reference equality
+			(whether they are the same object).
+		[ .equals() ]
+			tests for value equality
+			(whether they are logically "equal").
+			
+		*/
 		
 		
 		//논리연산자
