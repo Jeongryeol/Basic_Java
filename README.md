@@ -1,2 +1,2 @@
-# Wellcome !
-#### Pleasw Enter at 'Basic_Java' folder.
+# Welcome !
+#### Please Open 'Basic_Java' folder.
